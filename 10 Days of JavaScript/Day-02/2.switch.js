@@ -1,9 +1,11 @@
 /*
+Day = 02
+
+conditional Statment
 
 problem = https://www.hackerrank.com/challenges/js10-switch/problem
 
 */
-
 
 'use strict';
 
@@ -31,15 +33,29 @@ function readLine() {
 
 function getLetter(s) {
     let letter;
-    //letter ="abcd";
 
-    let n = 1;
-    switch (n) {
-        case 1:
-            letter = s[0];
+
+    switch (s.charAt(0)) {
+        case ('a' || 'e' || 'o' || 'i' || 'u'):
+            letter = "a";
             break;
-    }
-    // Write your code here
+        case ('b' || 'c' || 'd' || 'f' || 'g'):
+            letter = "b";
+            break;
+        case ('h' || 'j' || 'k' || 'l' || 'm'):
+            letter = "c";
+            break;
 
+        default:
+            letter = "D"
+
+    }
     return letter.toUpperCase();
+}
+
+
+function main() {
+    const s = readLine();
+
+    console.log(getLetter(s));
 }
